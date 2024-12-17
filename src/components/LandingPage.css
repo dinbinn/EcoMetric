@@ -1,0 +1,84 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a4e8c6, #f2dbb2);
+    padding: 20px;
+}
+
+.landing-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.landing-header h1 {
+    font-size: 48px;
+    color: #00796b; /* Changed color for better contrast */
+    font-weight: bold;
+}
+
+.landing-header p {
+    font-size: 20px; /* Increased font size for better readability */
+    color: #455a64;
+    margin-top: 10px;
+}
+
+.get-started-btn {
+    margin-top: 30px;
+    padding: 12px 40px; /* Increased padding for a larger button */
+    font-size: 20px; /* Increased font size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px 0;
+}
+
+.feature {
+    text-align: center;
+    max-width: 300px;
+    background-color: #ffffff; /* Added background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Added padding */
+    transition: transform 0.2s; /* Smooth transition on hover */
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.feature h2 {
+    font-size: 24px;
+    color: #00796b; /* Changed to match the header */
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.landing-footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 14px; /* Adjusted font size for footer */
+}
