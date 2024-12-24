@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Chart from 'chart.js/auto';
 import { getRelativePosition } from 'chart.js/helpers';
-import co2data from "../data/co2Data.json"; // Import JSON data
+import co2data from "../data/co2Data.json";
 
 const Co2Chart = () => {
     const [co2Data, setCo2Data] = useState(null);

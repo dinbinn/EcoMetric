@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Chart from 'chart.js/auto';
 import { getRelativePosition } from 'chart.js/helpers';
-import elecData from "../data/elecData.json"; // Import JSON data
+import elecData from "../data/elecData.json"; 
 
 const ElecChart = () => {
   useEffect(() => {

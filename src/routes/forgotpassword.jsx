@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { createGlobalStyle } from 'styled-components';
-import { userPool } from './awsConfig'; // Adjust the path as necessary
+import { userPool } from './awsConfig'; 
 
 const GlobalStyle = createGlobalStyle`
   /* forgotpassword.css */
@@ -111,7 +111,7 @@ const ForgotPassword = () => {
       },
       inputVerificationCode: () => {
         console.log('Forgot password verification code sent');
-        setStep(2); // Move to step 2 after the code is sent
+        setStep(2); 
       },
     });
   };
@@ -127,7 +127,7 @@ const ForgotPassword = () => {
       onSuccess: () => {
         console.log('Password reset successful');
         alert('Password reset successful');
-        setStep(1); // Reset to step 1 after successful password change
+        setStep(1); 
         window.location.href = '/login'; // Redirect to login page
       },
       onFailure: (err) => {

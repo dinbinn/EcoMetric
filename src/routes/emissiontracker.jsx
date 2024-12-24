@@ -284,7 +284,6 @@ const EmissionsTracker = () => {
     const scope = ['Scope 1', 'Scope 2', 'Scope 3'][index];
     dispatch({ type: 'SET_SELECTED_SCOPE', payload: scope });
 
-    // Reset Scope 3 Category to "All Categories" when switching away from Scope 3
     if (scope !== 'Scope 3') {
       dispatch({ type: 'SET_SELECTED_CATEGORY', payload: 'All Categories' });
     }
@@ -386,7 +385,7 @@ const EmissionsTracker = () => {
         <div className="chart-container">
         <Bar
     data={{
-      labels: ['Scope 1', 'Scope 2', 'Scope 3'], // Proper labels for the bars
+      labels: ['Scope 1', 'Scope 2', 'Scope 3'], 
       datasets: [
         {
           data: [cumulativeScopes.scope1, cumulativeScopes.scope2, cumulativeScopes.scope3],
@@ -396,10 +395,10 @@ const EmissionsTracker = () => {
     }}
     options={{
       responsive: true,
-      maintainAspectRatio: false, // Ensure consistent sizing
+      maintainAspectRatio: false, 
       plugins: {
         legend: {
-          display: false, // Disable the default legend
+          display: false, 
         },
         title: {
           display: true,
@@ -412,11 +411,11 @@ const EmissionsTracker = () => {
           display: true,
           ticks: {
             font: {
-              size: 14, // Font size for labels
+              size: 14, 
             },
           },
           title: {
-            display: false, // Hide the redundant x-axis title
+            display: false, 
           },
         },
         y: {
@@ -482,7 +481,7 @@ const EmissionsTracker = () => {
                   legend: { display: false },
                   title: {
                     display: true,
-                    text: `Monthly ${selectedScope || 'Scope 3'} Emissions`, // Dynamically set the title
+                    text: `Monthly ${selectedScope || 'Scope 3'} Emissions`, 
                     font: { size: '16vw' },
                   },
                 },
@@ -492,10 +491,10 @@ const EmissionsTracker = () => {
                       display: true,
                       text: 'Month (YYYY-MM)',
                       font: { size: 16 },
-                      padding: { bottom: 10 }, // Add spacing above the label
+                      padding: { bottom: 10 }, 
                     },
                     ticks: {
-                      padding: 10, // Add spacing between ticks and the x-axis
+                      padding: 10, 
                     },
                   },
                   y: {

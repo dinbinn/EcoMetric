@@ -1,7 +1,7 @@
 import React from "react";
 import "./surveyreview.css";
 
-const GOOGLE_SHEET_URL = "https://docs.google.com/forms/d/1Zm59K4eLodHZ0uFWRgGDnaNRRxeqnX3HJSgbI4MdMZU/edit?pli=1#responses"; // Replace with your Google Sheets link
+const GOOGLE_SHEET_URL = "https://docs.google.com/forms/d/1Zm59K4eLodHZ0uFWRgGDnaNRRxeqnX3HJSgbI4MdMZU/edit?pli=1#responses"; // Replace with Google Sheets link
 
 const SurveyReview = () => {
   return (

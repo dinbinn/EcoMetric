@@ -15,20 +15,20 @@
 
 .landing-header h1 {
     font-size: 48px;
-    color: #00796b; /* Changed color for better contrast */
+    color: #00796b; 
     font-weight: bold;
 }
 
 .landing-header p {
-    font-size: 20px; /* Increased font size for better readability */
+    font-size: 20px; 
     color: #455a64;
     margin-top: 10px;
 }
 
 .get-started-btn {
     margin-top: 30px;
-    padding: 12px 40px; /* Increased padding for a larger button */
-    font-size: 20px; /* Increased font size */
+    padding: 12px 40px; 
+    font-size: 20px; 
     background-color: #007bff;
     color: white;
     border: none;
@@ -39,7 +39,7 @@
 
 .get-started-btn:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    transform: scale(1.05); 
 }
 
 .features-section {
@@ -53,20 +53,20 @@
 .feature {
     text-align: center;
     max-width: 300px;
-    background-color: #ffffff; /* Added background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 20px; /* Added padding */
-    transition: transform 0.2s; /* Smooth transition on hover */
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    transition: transform 0.2s; 
 }
 
 .feature:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    transform: translateY(-5px); 
 }
 
 .feature h2 {
     font-size: 24px;
-    color: #00796b; /* Changed to match the header */
+    color: #00796b; 
     margin-bottom: 10px;
 }
 
@@ -80,5 +80,5 @@
     padding: 20px;
     text-align: center;
     color: #777;
-    font-size: 14px; /* Adjusted font size for footer */
+    font-size: 14px;
 }

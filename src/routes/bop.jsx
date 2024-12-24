@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Chart from 'chart.js/auto';
 import { getRelativePosition } from 'chart.js/helpers';
-import bopData from "../data/bopData.json"; // Import JSON data
+import bopData from "../data/bopData.json"; 
 
 const BopChart = () => {
     useEffect(() => {

@@ -5,17 +5,15 @@ import { UserContext } from "../context/userContext";
 
 const LandingPage = () => {
     const { user } = useContext(UserContext);  
-    const navigate = useNavigate();  // useNavigate hook for programmatic navigation
+    const navigate = useNavigate();  
 
-    // Checking if the user is logged in using sessionStorage, as in your original code
     const isLoggedIn = !!sessionStorage.getItem('accessToken');
 
-    // Function to handle Dashboard button click
     const handleButtonClick = () => {
         if (isLoggedIn) {
-            navigate('/dashboard/EcoData');  // Navigate to Dashboard if logged in
+            navigate('/dashboard/EcoData');  
         } else {
-            navigate('/login');  // Navigate to Login page if not logged in
+            navigate('/login');  
         }
     };
 
@@ -24,7 +22,7 @@ const LandingPage = () => {
             <header className="landing-header">
                 <h1>Welcome to EcoMetrics</h1>
                 <p>Your one-stop solution for comprehensive data insights on carbon emissions and sustainability.</p>
-                {/* Button now triggers handleButtonClick for better routing control */}
+                {}
                 <button className="get-started-btn" onClick={handleButtonClick}>
                     {isLoggedIn ? "Dashboard" : "Get Started"}
                 </button>

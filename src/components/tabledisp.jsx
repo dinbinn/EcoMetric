@@ -49,14 +49,14 @@ const TableList = () => {
   const [error, setError] = useState(null);
 
   const fetchTables = async () => {
-    console.log("API Key:", apiKey); // Log the API key for debugging
+    console.log("API Key:", apiKey); 
     try {
       const data = await getTables(apiKey);
-      console.log("Response Data:", data); // Log the response for debugging
+      console.log("Response Data:", data); 
       setTables(data);
       setError(null);
     } catch (err) {
-      console.error("Error fetching tables:", err); // Log any errors
+      console.error("Error fetching tables:", err); 
       setError('Failed to fetch tables. Please check your API key and try again.');
       setTables([]);
     }

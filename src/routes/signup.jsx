@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signUp, confirmSignUp } from "../authService"; // Assuming confirmSignUp is imported here
+import { signUp, confirmSignUp } from "../authService"; 
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -106,9 +106,9 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [verificationCode, setVerificationCode] = useState(""); // New state for verification code
+  const [verificationCode, setVerificationCode] = useState(""); 
   const [error, setError] = useState("");
-  const [isVerificationMode, setIsVerificationMode] = useState(false); // Toggle for signup/verification mode
+  const [isVerificationMode, setIsVerificationMode] = useState(false); 
   const navigate = useNavigate();
 
   const handleSignUp = async (e) => {
@@ -119,8 +119,8 @@ const SignUp = () => {
     }
     try {
       await signUp(username, password, email);
-      setIsVerificationMode(true); // Switch to verification mode
-      setError(""); // Clear any previous errors
+      setIsVerificationMode(true); 
+      setError(""); 
     } catch (error) {
       setError(`Sign up failed: ${error.message}`);
     }
@@ -129,7 +129,7 @@ const SignUp = () => {
   const handleVerify = async (e) => {
     e.preventDefault();
     try {
-      await confirmSignUp(username, verificationCode); // Assuming this method is implemented in authService.js
+      await confirmSignUp(username, verificationCode); 
       navigate("/login");
     } catch (error) {
       setError(`Verification failed: ${error.message}`);
@@ -152,7 +152,7 @@ const SignUp = () => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
-                disabled={isVerificationMode} // Disable field in verification mode
+                disabled={isVerificationMode} 
               />
             </div>
             <div className="input-group">
@@ -164,7 +164,7 @@ const SignUp = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                disabled={isVerificationMode} // Disable field in verification mode
+                disabled={isVerificationMode} 
               />
             </div>
             <div className="input-group">
@@ -176,7 +176,7 @@ const SignUp = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                disabled={isVerificationMode} // Disable field in verification mode
+                disabled={isVerificationMode} 
               />
             </div>
             <div className="input-group">
@@ -188,7 +188,7 @@ const SignUp = () => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
-                disabled={isVerificationMode} // Disable field in verification mode
+                disabled={isVerificationMode} 
               />
             </div>
             {isVerificationMode && (

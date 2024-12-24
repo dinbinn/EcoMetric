@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// Assumed composition of Vietnam's electricity mix
 const electricityMix = [
   { source: 'Coal', percentage: 56.9 },
   { source: 'Hydro', percentage: 18.9 },
@@ -130,7 +129,7 @@ const styles = {
     fontSize: '14px',
     color: '#555',
     marginBottom: '10px',
-    fontWeight: 'normal', // Ensures it's not bold
+    fontWeight: 'normal', 
   },
   input: {
     width: '100%',
@@ -160,13 +159,13 @@ const styles = {
   result: {
     marginTop: '20px',
     padding: '15px',
-    backgroundColor: '#e8f5e9', // Light green background
+    backgroundColor: '#e8f5e9', 
     borderRadius: '8px',
-    border: '1px solid #4caf50', // Green border for clarity
+    border: '1px solid #4caf50', 
   },
   resultHeading: {
     margin: '0 0 10px',
-    color: '#2e7d32', // Darker green
+    color: '#2e7d32', 
     fontWeight: 'bold',
     fontSize: '18px',
   },

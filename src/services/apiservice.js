@@ -52,7 +52,6 @@ export const getTableContents = async (tableName) => {
 };
 const API_POST_BASE_URL = 'https://ma3la05bq1.execute-api.ap-southeast-1.amazonaws.com/Post/';
 
-// Function to submit custom data request
 export const submitCustomDataRequest = async (data) => {
     try {
         const response = await axios.post(`${API_POST_BASE_URL}customrequest`, data, {
@@ -60,10 +59,10 @@ export const submitCustomDataRequest = async (data) => {
                 'Content-Type': 'application/json',
             },
         });
-        return response; // Return the response object
+        return response; 
     } catch (error) {
         console.error('Error submitting custom data request:', error);
-        throw error; // Throw the error for handling in the component
+        throw error; 
     }
 };
 

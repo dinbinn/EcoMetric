@@ -175,7 +175,6 @@ const APIKeys = () => {
 
 export default APIKeys;
 
-// Inline styles defined as JavaScript objects
 const styles = {
     container: {
         display: 'flex',

@@ -12,13 +12,10 @@ const ReusableChart = ({ chartId, chartTitle, yAxisLabel, data, dataKey, labelKe
 
         if (!ctx) return;
 
-        // Extract unique labels and sort them in ascending order
         const uniqueLabels = [...new Set(data.map(item => item.year))].sort((a, b) => a - b);
 
-        // Extract unique keys for the datasets
         const uniqueKeys = [...new Set(data.map(item => item[dataKey]))];
 
-        // Prepare datasets for each key
         const datasets = uniqueKeys.map(key => {
             const keyData = data.filter(item => item[dataKey] === key);
             const dataValues = uniqueLabels.map(year => {
@@ -30,7 +27,7 @@ const ReusableChart = ({ chartId, chartTitle, yAxisLabel, data, dataKey, labelKe
                 label: keyName,
                 data: dataValues,
                 fill: false,
-                borderColor: getRandomColor(), // Example function to generate random colors
+                borderColor: getRandomColor(), 
                 tension: 0.1
             };
         });
@@ -67,7 +64,6 @@ const ReusableChart = ({ chartId, chartTitle, yAxisLabel, data, dataKey, labelKe
                 onClick: (e) => {
                     const canvasPosition = getRelativePosition(e, chart);
 
-                    // Example: Get data values corresponding to click position
                     if (chart.scales && chart.scales.x && chart.scales.y) {
                         const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
                         const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
@@ -84,7 +80,6 @@ const ReusableChart = ({ chartId, chartTitle, yAxisLabel, data, dataKey, labelKe
         };
     }, [data, chartId, chartTitle, yAxisLabel, dataKey, labelKey]);
 
-    // Function to generate random RGB color
     const getRandomColor = () => {
         const r = Math.floor(Math.random() * 256);
         const g = Math.floor(Math.random() * 256);

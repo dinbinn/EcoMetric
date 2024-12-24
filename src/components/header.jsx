@@ -30,9 +30,9 @@ const styles = {
     overflowX: 'auto',
     whiteSpace: 'nowrap',
     height: '65px',
-    position: 'fixed',  // Use fixed position to keep the header at the top
-    top: 0,             // Ensure it sticks to the top of the viewport
-    width: '100%',      // Make sure it spans the full width of the viewport
+    position: 'fixed',  
+    top: 0,             
+    width: '100%',      
     zIndex: 1000, 
   },
   scrollContainer: {

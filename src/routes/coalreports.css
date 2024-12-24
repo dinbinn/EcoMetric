@@ -47,14 +47,14 @@
 }
 
 .coal-report-card h3 {
-  font-size: 1.25rem; /* Keep title size unchanged */
+  font-size: 1.25rem; 
   color: #333;
   text-align: left;
 }
 
 .coal-report-card p {
   color: #555;
-  font-size: 1.05rem; /* Increased font size for description and date */
+  font-size: 1.05rem; 
   text-align: left;
 }
 
@@ -67,10 +67,9 @@
   border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
-  width: 80%; /* Button width */
+  width: 80%; 
   text-align: center;
-  align-self: center; /* Center the button horizontally */
-}
+  align-self: center; 
 
 .coal-report-download-btn:hover {
   background-color: #0056b3;

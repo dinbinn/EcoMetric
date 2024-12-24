@@ -6,7 +6,7 @@ import Login from "./routes/login";
 import Co2Chart from "./routes/co2";
 import ElecChart from "./routes/elec";
 import SignUp from "./routes/signup";
-import APIKeys from "./routes/apikey"; // APIKeys is the Dashboard page
+import APIKeys from "./routes/apikey";
 import BopChart from "./routes/bop";
 import ForgotPassword from "./routes/forgotpassword";
 import EnvCheck from './components/envcheck';
@@ -24,12 +24,12 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/", 
-      element: <LandingPage />, // This should always render first for the root path
+      element: <LandingPage />, 
       errorElement: <ErrorPage />,
     },
     {
       path: "/dashboard",
-      element: <Root />, // Render dashboard only if logged in
+      element: <Root />, 
       errorElement: <ErrorPage />,
       children: [
         {
